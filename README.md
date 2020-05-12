@@ -6,3 +6,5 @@ Goals of the project are.
 2. Speed.
 3. Reliability.
 4. Scalability management of 1 or many printers (printer farms).
+
+This project is heavily inspired by OctoPod. The developer of that app has done some great work. However it is locked into the iOS echosystem.
