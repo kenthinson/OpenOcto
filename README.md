@@ -10,4 +10,5 @@ Goals of the project are.
 This project is heavily inspired by OctoPod. The developer of that app has done some great work. However it is locked into the iOS echosystem.
 
 Work in progress design:
+![GitHub Logo](https://github.com/kenthinson/OpenOcto/blob/master/readme-images/iPad%209.7_2.png)
 ![GitHub Logo](https://github.com/kenthinson/OpenOcto/blob/master/readme-images/iPad%209.7.png)
