@@ -92,3 +92,84 @@ class LinearSales {
 
   LinearSales(this.year, this.sales);
 }
+
+class TempChart extends StatelessWidget {
+  const TempChart({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      children: <Widget>[
+        Positioned(
+          child: SimpleLineChart.withSampleData(),
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 60,
+        ),
+        Positioned(
+          child: Container(
+            child: Row(
+              children: <Widget>[
+                Padding(
+                  padding: const EdgeInsets.only(left: 40),
+                  child: Row(
+                    children: <Widget>[
+                      Container(height: 10, width: 10, color: Color.fromARGB(255, 1,  25,  250),),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 5.0),
+                        child: Text('Actual Bed'),
+                      ),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 40),
+                  child: Row(
+                    children: <Widget>[
+                      Container(height: 10, width: 10, color: Color.fromARGB(180,135, 144, 251),),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 5.0),
+                        child: Text('Target Bed'),
+                      ),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 40),
+                  child: Row(
+                    children: <Widget>[
+                      Container(height: 10, width: 10, color: Colors.red,),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 5.0),
+                        child: Text('Actual Extruder'),
+                      ),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 40),
+                  child: Row(
+                    children: <Widget>[
+                      Container(height: 10, width: 10, color: Color.fromARGB(255,255, 139, 144),),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 5.0),
+                        child: Text('Target Extruder'),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+          bottom: 0,
+          left: 0,
+          right: 0,
+          height: 60,
+        )
+      ],
+    );
+  }
+}

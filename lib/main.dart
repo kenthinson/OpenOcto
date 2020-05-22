@@ -50,8 +50,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
 
   @override
   Widget build(BuildContext context) {
@@ -59,19 +57,17 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text('test'),
       ),
-      body: Center(child: SimpleLineChart.withSampleData()),
+      body: Center(child: TempChart()),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-            print('Getting printer state');
+          print('Getting printer state');
           http.get(
-    'http://10.111.3.78/api/printer',
-    headers: {
-      "X-Api-Key": "7691F24D18FB4BBA9C9420226E0ED5B6"
-      },
-  ).then((value){
-     var printerData = PrinterFlags.fromJson(json.decode(value.body));
-     print(printerData.cancelling);
-  });
+            'http://10.111.3.78/api/printer',
+            headers: {"X-Api-Key": "7691F24D18FB4BBA9C9420226E0ED5B6"},
+          ).then((value) {
+            var printerData = PrinterFlags.fromJson(json.decode(value.body));
+            print(printerData.cancelling);
+          });
         },
         tooltip: 'Increment',
         child: Icon(Icons.add),
@@ -79,3 +75,5 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+
+
