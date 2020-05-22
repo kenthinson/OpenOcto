@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 import 'package:http/http.dart' as http;
+import 'TempChart.dart';
 import 'printer.dart';
 
 import 'package:flutter/material.dart';
@@ -58,13 +59,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text('test'),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-          ],
-        ),
-      ),
+      body: Center(child: SimpleLineChart.withSampleData()),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
             print('Getting printer state');
